@@ -23,10 +23,40 @@
 //put a variable in to function is called function expression
 
 //how to  convert a function in to fat arrow function
-const sume = () => {
-    let a = 5; b = 6;
-    let sume = a+b;
-    // console.log("the sum of two numbers is " + sume);
-    return `the sum of two munbers is ${sume}`;
+// const sume = () => {
+//     let a = 5; b = 6;
+//     let sume = a+b;
+//     console.log("the sum of two numbers is " + sume);
+//     return `the sum of two munbers is ${sume}`;
+// }
+// console.log(sume());
+
+
+// higher_order_function
+// function cb(){
+//     console.log("call back function");
+//     return "return of cb function "
+// }
+// function higher(callback){
+//     console.log("higher order function ");
+   
+//     let ans =  callback();
+//     console.log('this is below call')
+//     return ans;
+// }
+// console.log(higher(cb));
+function outer(){
+    let arr =[];
+    let i;
+    for(i =0;i<4;i++){
+        arr[i] = function(){
+            return i;
+        }
+        return arr;
+    }
+    let get_arr = outer();
+        console.log(get_arr[0]());
+        console.log(get_arr[1]());
+        console.log(get_arr[2]());
+        console.log(get_arr[3]());
 }
-console.log(sume());
