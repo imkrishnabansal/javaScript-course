@@ -60,13 +60,13 @@ let products = [
         price: 500,
     },
     {
-        name: "coffee",
+        name: "aofsee",
         mfg: "22/10/2024",
         exp: "24/10/2025",
         price: 600,
     },
     {
-        name: "coffee dark",
+        name: "ctffee dark",
         mfg: "22/10/2024",
         exp: "24/10/2025",
         price: 900,
@@ -79,12 +79,22 @@ let products = [
     },
 ];
 
-const totalbill = products.reduce((accum, ele) => {
-    return accum + ele.price;
-}, 0);
+// const totalbill = products.reduce((accum, ele) => {
+//     return accum + ele.price;
+// }, 0);
 
-console.log(totalbill);
-const foundele = products.find((ele)=>{
-    return ele.price === 500;
-})
-console.log(foundele)
+// console.log(totalbill);
+// const foundele = products.find((ele)=>{
+//     return ele.price === 500;
+// })
+// console.log(foundele)
+
+let incproduct = products.sort((a,b)=>{
+    return a.name -b.name;
+});
+console.log(incproduct)
+
+// ASYNCRONUS FUNCTION
+//  it is used in web apis  ---> it runs only on browser
+
+
