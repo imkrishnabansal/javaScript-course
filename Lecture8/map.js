@@ -94,7 +94,5 @@ let incproduct = products.sort((a,b)=>{
 });
 console.log(incproduct)
 
-// ASYNCRONUS FUNCTION
-//  it is used in web apis  ---> it runs only on browser
 
 
